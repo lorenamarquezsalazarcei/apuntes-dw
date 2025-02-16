@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Vertical y Horizontal</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+            padding: 15px;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header, .footer {
+            width: 100vw;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: gray;
+            
+
+        }
+
+        .content{
+            display: flex;
+            flex-direction: row;
+            background-color: teal;
+            flex-direction: column;
+
+
+        }
+        .sidebar{
+             width: 300px;  
+             padding: 10px;
+             background-color: beige
+
+        }
+
+       
+
+        .sidebar ul li a{
+            text-decoration: none;
+            color: black;
+        }
+
+
+        .sidebar ul li a:hover {
+            color: teal;
+        }
+        .main-content{
+            padding: 10px;
+
+        }
+
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"> Header</div>
+        <div class="content">
+            <div class="sidebar">
+                <ul>
+                    <li>Elemento 1</li>
+                    <li>Elemento 2</li>
+                    <li>Elemento 3</li>
+                    <li><a href="./index.html">Home</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+            <h1>Contenido Principal</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate illum, mollitia adipisci architecto provident debitis officia quasi perferendis alias amet natus ea ipsa quibusdam consectetur aperiam rem ullam suscipit harum?</p>
+    
+             </div>
+        <div class="footer">Derechos de autor 2025 Nombre de la empresa.</div>
+
+    </div>
+</body>
+</html>

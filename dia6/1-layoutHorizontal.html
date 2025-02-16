@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Horizontal</title>
+</head>
+
+    <style>
+        /*Reset CSS*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /*Estilos de mi web*/
+        .container {
+            display: flex;
+            background-color: teal;
+            height: 100vh; /*view height alto de la vista */
+
+        }
+        .sidebar{
+             width: 300px;  /* Ancho de la barra lateral*/
+             padding: 10px;
+             background-color: beige
+
+        }
+
+        .sidebar ul{
+            list-style: none;
+        }
+
+        .sidebar ul li a{
+            text-decoration: none;
+            color: black;
+        }
+
+
+        .sidebar ul li a:hover {
+            color: teal;
+        }
+        .main-content{
+            padding: 10px;
+
+        }
+
+    </style>
+<body>
+    <div class="container">
+       <div class="sidebar">
+            <!-- 
+            ul>li*3{Elemento $}+li>a[href="./index.html"]{Home}
+                >   no metemos dentro de la etiqueta
+                *   multiplica los elementos
+                {}  escriben texto
+                {$} agregan un numero a cada items
+                +   agregar una etiqueta hermana (sibling)
+                []  acceden a los atributos 
+            -->
+            <ul>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+                <li><a href="./index.html">Home</a></li>
+            </ul>
+        </div>
+            <!-- short cut en emmet 
+             div.main-content>h1{Contenido principal}+p{lorem}
+            -->
+   
+      <div class="main-content">
+        <h1>Contenido Principal</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate illum, mollitia adipisci architecto provident debitis officia quasi perferendis alias amet natus ea ipsa quibusdam consectetur aperiam rem ullam suscipit harum?</p>
+
+
+      </div>
+    </div>
+</body>
+</html>

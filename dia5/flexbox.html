@@ -22,11 +22,19 @@
         .boxDouble {
             width: 200px;
         }
+        .greenBox {
+            background-color: green;
+            box-shadow: inset 10px 10px 10px rgb(8,86,39);
+            order: 1;
+        }
 
+        /* .flexx div:nth-last-of-type(4){
+            background-color: green;
+        } */ 
         .purpleblox{
             background-color: purple;
             padding: 5px;
-            height: 250px;
+            height: 550px;
 
         }
         .flexx {
@@ -66,6 +74,20 @@
            justify-content: space-between;
            justify-content: space-around; /* laterales 1/2 de los centrales */
         }
+
+        .ej4{
+            align-items: flex-start;
+            align-items: center;
+
+        }
+
+        .ej5{
+            flex-wrap: wrap;
+            align-content: space-between;
+
+        }
+
+    
     </style>
 </head>
 <body>
@@ -95,7 +117,7 @@
     </div>
 
     <h3>Justify content</h3>
-
+    <p>Alinea los elementos flex a lo largo del eje PRINCIPAL. Opciones: flex-star, flex-end,center, space-between, space-around y space-evenly </p>
     <div class="flexx ej3 purpleblox">
         <div class="box boxDouble">1d</div>
         <div class="box">2</div>
@@ -105,16 +127,47 @@
 
 
     <h3>Align items</h3>
+    <p>Alinea  los elementos flex a lo largo del eje SECUNDARIO (cuando los elementos están en una sola línea). Opciones: flex-star, flex-end, center, baseline y stretch </p>
+    <div class="flexx ej4 purpleblox">
+        <div class="box boxDouble">1d</div>
+        <div class="box">2</div>
+        <div class="box boxDouble">3d</div>
+        
+    </div>
 
     
     <h3>Align Content</h3>
-
-
+    <p>Alinea las múltiples líneas que componen los elementos flex (hijos) a lo largo del eje SECUNDARIO, respecto al padre (cuando los elementos están en más de una línea). Opciones: flex-star</p>
+    <div class="flexx ej5 purpleblox">
+        <div class="box boxDouble">1</div>
+        <div class="box boxDouble">2</div>
+        <div class="box boxDouble">3</div>
+        <div class="box boxDouble">4</div>
+        <div class="box boxDouble">5</div>
+        <div class="box boxDouble">6</div>
+        
+    </div>
+    
     <h3>Order</h3>
+    <p>Ordena un elemento individual repecto a los otros elementos. Por defecto, los elementos tienen un valor 0, pero nosotros podemos usar esta propiedad para establecerlo a un numero entero positivo o negativo. Opciones:-1 (inicio), 0 (posicion actual) y 1 (final)</p>
 
-
+    <div class="flexx ej6">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box greenBox">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        
+    </div>
     <h3>Flex Grow</h3>
+    <p>Cuanto va a crecer ese elemento </p>
 
+ <div class="flexx ">
+        <div style="flex-grow: 0;"class="box">1</div> 
+        <div style="flex-grow: 0;"class="box">2</div> 
+        <div style="flex-grow: 1;"class="box">3</div> 
+ </div>
 
 
 </body>
