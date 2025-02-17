@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Cuadrícula Vertical y Horizontal</title>
+</head>
+<style>
+    /* Reset de CSS */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
+
+    }
+
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgb(43, 41, 40);
+        color: white;
+        width: 100vw;
+        padding: 20px;
+    }
+
+    .logo {
+        display: flex;
+
+    }
+
+    .menu {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(43, 41, 40);
+        color: white;
+        width: 100vw;
+        padding: 20px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        background-color: teal;
+        height: 100vh;
+    }
+
+    .sidebar {
+        width: 300px;
+        padding: 10px;
+        background-color: beige
+    }
+
+    .sidebar ul {
+        list-style: none;
+    }
+
+    .sidebar ul li a {
+        text-decoration: none;
+        color: black;
+    }
+
+
+    .sidebar ul li a:hover {
+        color: teal;
+    }
+
+    .main-content {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .section2 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+    }
+
+    .Card {
+        background-color: gray;
+        color: white;
+        padding: 20px;
+        flex-grow: 1;
+        /*Permite al box crecer*/
+        flex-shrink: 0;
+        /* Permite ser mas pequeña*/
+        flex-basis: 200px;
+        /* valor inicial*/
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Logo</div>
+
+            <div class="menu">
+
+                <div class="inicio">Inicio</div>
+                <div class="acercade">Acerca de</div>
+                <div class="servicios">Servicios</div>
+                <div class="contacto">Contacto</div>
+            </div>
+
+        </div>
+
+        <div class="main">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#"> Enlace 1</a></li>
+                    <li><a href="#"> Enlace 2</a></li>
+                    <li><a href="#"> Enlace 3</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="section1">
+                    <h1>Contenido Principal</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate illum, mollitia adipisci
+                        architecto provident debitis officia quasi perferendis alias amet natus ea ipsa quibusdam
+                        consectetur aperiam rem ullam suscipit harum?</p>
+                </div>
+                <div class="section2">
+                    <div class="Card">Tarjeta 1</div>
+                    <div class="Card">Tarjeta 2</div>
+                    <div class="Card">Tarjeta 3</div>
+                    <div class="Card">Tarjeta 4</div>
+                    <div class="Card">Tarjeta 5</div>
+                    <div class="Card">Tarjeta 6</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">Derechos de autor 2025 Nombre de la empresa.</div>
+
+    </div>
+
+</body>
+
+</html>
