@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <label for="txt-usuario">Usuario</label>
+        <input type="text" id="txt-usuario" name="txt-usuario" placeholder="Usuario">
+        <br>
+        <label for="txt-email">Email</label>
+        <input type="email" id="txt-email" name="txt-email"placeholder="Tu Correo">
+        <br>
+        <label for="txt-clave">Clave</label>
+        <input type="password" id="txt-clave" name="txt-clave"placeholder="Tu clave (8 caracteres)">
+        <br>
+        <label for="text-info">Biografía</label>
+        <br>
+        <textarea name="descripcion" id="" cols="30" rows="10"></textarea>
+        <br>
+        <input type="radio" id="rd-edad" name="rd-edad" value="menor" />
+        <label for="rd-edad">Menor de 18</label>
+        
+        <br>
+        <input type="radio" id="rd-edad-menor" name="rd-edad" value="mayor" />
+        <label for="rd-edad-menor">Mayor de 18</label>
+        
+        <br>
+        <input type="radio" id="rd-edad-no" name="rd-edad" value="mayor" />
+        <label for="rd-edad-no">No contesta</label>
+
+        <h3>Hobbies</h3>
+        <input type="checkbox" name="chk-futbol" id="chk-futbol">
+        <label for="chk-futbol">Futbol</label>
+        <br>
+        <input type="checkbox" name="chk-voley" id="chk-voley" value="voley">
+        <label for="chk-voley">Voley</label>
+        <br>
+        <input type="checkbox" name="chk-leer" id="chk-leer" value="leer">
+        <label for="chk-leer">Leer</label>
+        <br>
+        <label for="select_puesto">Trabajo</label>
+        <select name="select_puesto" id="select_puesto">
+            <option value="estudiante">Estudiante</option>
+            <option value="medico">Médico</option>
+            <option value="profesor">Profesor</option>
+        </select>        
+        <input type="submit" value="Mandar...">
+        <br>
+
+
+
+
+    </form>
+</body>
+
+</html>
