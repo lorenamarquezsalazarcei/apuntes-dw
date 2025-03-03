@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otros imputs </title>
+</head>
+<style>
+    fieldset{
+        display:flex;
+        flex-direction: column;
+    }
+</style>
+
+<body>
+    <h2>OTROS INPUT</h2>
+<fieldset>
+    <legend>Parte 1</legend>
+    <form action="#" method="GET" style="display:flex; flex-direction: column; width: 200px;">
+        <label>
+            Edad: <input type="number" name="edad" min="18" max="120" />
+        </label>
+
+        <label>
+            Color: <input type="color" name="color" />
+        </label>
+        <br>
+    </fieldset>
+    <fieldset>
+        <legend>Parte 2</legend>
+        <label>
+            Fecha: <input type="date" name="date" />
+        </label>
+        <br>
+
+        <label>
+            Archivo: <input type="file" name="file" />
+        </label>
+        <br>
+
+        <input type="hidden" name="hiddenField" value="valor_oculto" />
+
+        <label>
+            Rango: <input type="range" name="range" min="0" max="100" />
+        </label>
+        <br>
+</fieldset>
+        <button type="reset">Restablecer</button>
+        <button type="submit">Enviar</button>
+
+
+
+        <input type="submit" value="Guardar">
+    </form>
+
+</body>
+
+</html>
