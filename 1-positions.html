@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo de posiciones en CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            margin-top: 50px;
+
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding-inline: 10px;
+        }
+
+        .yellow {
+            background-color: yellow;
+
+        }
+
+        .static {
+            position: static;
+        }
+
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- STATIC
+     Normal, no se aplica ninguna propiedad de posición. Se muestra en el flujo normal del documento. -->
+    <div class="container">
+        <div class="box"></div>
+        <div class="box yellow static">Static</div>
+        <div class="box"></div>
+
+        <!-- RELATIVE
+        Afectan las position top, left, right, bottom
+    -->
+        <div class="container">
+            <div class="box"></div>
+            <div class="box yellow relative">Relative</div>
+            <div class="box"></div>
+
+        </div>
+        <!-- ABSOLUTE
+ Afectan las posiciones top, left, right,bottom 
+ no ocupa espacio
+ Se posiciona con respecto al padre mas cercano que tenga una propiedad de posición diferente a static(normalmente relative. Si no encuentra una, utiliza el body) -->
+        <div class="container relative">
+            <div class="box"></div>
+            <div class="box yellow absolute">Absolute</div>
+            <div class="box"></div>
+
+        </div>
+
+        <!-- FIXED
+Se mantiene fijo en la pantalla y no se mueve al hacer scroll. 
+Afectan las posiciones top, left, right,bottom 
+no ocupa espacio
+Se posiciona con respecto a la ventana del navegafor no al body.
+
+-->
+        <div class="container">
+            <div class="box"></div>
+            <div class="box yellow fixed">Fixed</div>
+            <div class="box" style="height: 2000px;"></div>
+
+        </div>
+        <!-- STYCKY 
+ comportamiento de una combinanción entre relative y fixed.
+ utiliza top o left como punto de adhesión
+ se posiciona con respecto a la venta del navegador (viwport)
+ se queda fijo en la pantalla (fixed) hasta que el elemento padre se acaba.-->
+        <div class="container"
+            style="height: 300px; width: 400px; border: 1px solid gray; padding: 20px;  overflow: scroll;">
+            <div class="box" style="margin-top: 100px;"></div>
+            <div class="box yellow sticky" style="margin-top: 100px;">Sticky</div>
+            <div class="box" style="height: 2000px; margin: top 100px;"></div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

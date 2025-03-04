@@ -28,6 +28,12 @@ Investigar los sigueinte types, explicar que hacen y crear un ejemplo en `otros-
 
 -[BEM](https://getbem.com/naming) 
 
+## Para que se usa
+
+1. Comunicar un proposito o función
+2. comunicar la estructura del componente
+3. MArca una especificidad baja consistente.
+
 <style>
     .card{
 
