@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad4</title>
+<style>
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    .body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+
+
+}
+.picture__img{
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+.title__h1{
+    font-size: 24px;
+    margin: 0;
+    display:none
+  
+
+}
+.title__h1--mobile{
+    display: block;
+}
+
+@media (min-width:650px) {
+    body {
+        background-color: green;
+    }
+ 
+    
+    .title__h1--mobile{
+        
+        display: none;
+        }
+        .title__h1--tablet{
+            display: block;
+        
+        }
+        .title__h1--desktop{
+            display: none;
+        
+        }
+
+}
+
+@media screen and (min-width:1024px) {
+    body{
+        background-color: blue;
+    }
+    .title__h1--mobile{
+        display: none;
+        }
+        .title__h1--tablet{
+            display: none;
+        
+        }
+        .title__h1--desktop{
+            display: block;
+        
+        }
+    
+}
+@media screen and (max-width:649px) {
+    body{
+        background-color: red;
+    }
+    .title__h1--mobile{
+        display: block;
+        }
+        .title__h1--tablet{
+            display: none;
+        
+        }
+        .title__h1--desktop{
+            display: none;
+        
+        }
+    
+}
+</style>
+</head>
+<body class="body">
+    
+        <div class="title">
+            <h1 class="title__h1 title__h1--mobile">Mobile </h1>
+            <h1 class="title__h1 title__h1--desktop">Desktop </h1>
+        </div>
+    <main class="main">
+        <picture class="picture">
+            <source media="(min-width:1024px)" srcset="https://static.wixstatic.com/media/ddc2cb_d2ea0ec0fd5f4a2f9cc14bc30eda432d~mv2.jpg/v1/fill/w_980,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ddc2cb_d2ea0ec0fd5f4a2f9cc14bc30eda432d~mv2.jpg">
+            <source media="(min-width:650px)" srcset="https://www.hola.com/horizon/original_aspect_ratio/0ed74bbcf083-corto-z.jpg">
+            <img class="picture__img" src="https://www.zooplus.es/magazine/wp-content/uploads/2019/03/Perro-chihuahua.jpg" alt="Mi mascota">
+        </picture>
+        <h1 class="title__h1 title__h1--tablet">Tablet</h1> 
+    </main>
+    
+</body>
+</html>
