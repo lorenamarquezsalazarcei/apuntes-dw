@@ -88,6 +88,21 @@ intentamos desarrollar siempre primero para el movil y luego para pantallas más
 
 }
 ```
+## Utilizarlo en HTML 
+Podemos utilizar los MQ directmanee en nuestro html con el atributo medi. Antes debemos asegurarnos que exista la etiqueta meta viwport en el head. 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Ejemplos NO RECOMENDADOS:
+```html
+<link rel="stylesheet" media="screen and (min-width:600px)" href="./css/estilos-tablet.css">
+<link rel="stylesheet" media="screen and (min-width:600px)" href="./css/estilos-desktop.css">
+
+<style media="screen an (min-width:600px)">
+    .body{
+        background:red
+    }
+    </style>
+```
 
 # Ejemplo de Media queries en Imagenes (usando picture)
 
@@ -97,3 +112,14 @@ intentamos desarrollar siempre primero para el movil y luego para pantallas más
     <source media="(min.width:450px)" srcset="./img/mediana.jpg">
 <img src="./img/fotogato.jpg" alt="Mi mascota">
 ```
+
+## Trucos para un buen responsive
+- Utilzar medidas relativas (%,vw,vh,em,rem) (tratar de no utilizar px)
+- No utilizar etiquetas de height (Utilizarls solo en algunas ocasiones como en el footer)
+
+## Comprobación nuestro REsponsive + MQ
+- Utilizar el inspector de elementtos de chrome
+- Probarla en nuestro dispositivo.
+- Usar la App https://responsively.app para probar pantallas simultaneas.
+
+
