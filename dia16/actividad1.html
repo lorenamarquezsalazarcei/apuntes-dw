@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        .body {
+            background-color: rgb(68, 68, 68);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 20px;
+
+        }
+
+        .box {
+            background-color: #1eaafc;
+            background-image: linear-gradient(130deg, #6c52d9 0%, rgb(66, 211, 167));
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.19);
+            border-radius: 4px;
+            border: 4px solid #171717;
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: beige;
+        }
+        .grid{
+            display: grid;
+            height: 100vh;
+            grid-template-columns: repeat (3,1fr);
+            grid-template-rows: repeat(4,1fr);
+            grid-gap: 10px;
+            grid-template-areas: 
+            "Header Header Header"
+            "Sidebar Content-1 Content-1"
+            "Footer Footer Footer";
+        }
+        .Header{
+            grid-area: header;
+        }
+
+        .Sidebar{
+            grid-area: Sidebar;
+            background-color: aquamarine;
+        }
+        .Content-1{
+            grid-area: Content-1;
+
+        }
+        .Content-2{
+            grid-area: Content-2;
+
+        }
+        .Content-3{
+            grid-area: Content-3;
+
+        }
+        .Footer {
+            grid-area: Footer;
+        }
+
+        .whatsapp{
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .whatsapp i{
+            font-size: 48px;
+            color: green;
+            margin-top: -3px;
+            margin-left: -1px;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div class="grid"> 
+        <div class="Header box">Header</div>
+        <div class="Content-1 box"> Content-1</div>
+        <div class="Content-2 box"> Content-2</div>
+        <div class="Content-3 box"> Content-3</div>
+        <div class="Sidebar box box--green"> Sidebar</div>
+        <div class="Footer box">Footer</div>
+    </div>
+</body>
+
+</html>
