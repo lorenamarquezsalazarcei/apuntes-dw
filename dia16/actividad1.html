@@ -40,36 +40,37 @@
         .grid{
             display: grid;
             height: 100vh;
-            grid-template-columns: repeat (3,1fr);
+            grid-template-columns: 300px 2fr 2fr;
             grid-template-rows: repeat(4,1fr);
             grid-gap: 10px;
             grid-template-areas: 
-            "Header Header Header"
-            "Sidebar Content-1 Content-1"
-            "Footer Footer Footer";
+            "header     header      header"
+            "sidebar    content-1   content-1"
+            "sidebar    content-2   content-3"
+            "footer     footer      footer";
         }
         .Header{
             grid-area: header;
         }
 
         .Sidebar{
-            grid-area: Sidebar;
-            background-color: aquamarine;
+            grid-area: sidebar;
+            background-color: aquamarine !important;
         }
         .Content-1{
-            grid-area: Content-1;
+            grid-area: content-1;
 
         }
         .Content-2{
-            grid-area: Content-2;
+            grid-area: content-2;
 
         }
         .Content-3{
-            grid-area: Content-3;
+            grid-area: content-3;
 
         }
         .Footer {
-            grid-area: Footer;
+            grid-area: footer;
         }
 
         .whatsapp{
@@ -96,7 +97,7 @@
         <div class="Content-1 box"> Content-1</div>
         <div class="Content-2 box"> Content-2</div>
         <div class="Content-3 box"> Content-3</div>
-        <div class="Sidebar box box--green"> Sidebar</div>
+        <div class="Sidebar box"> Sidebar</div>
         <div class="Footer box">Footer</div>
     </div>
 </body>

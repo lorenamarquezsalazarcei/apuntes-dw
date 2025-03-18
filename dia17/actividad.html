@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjetas de Personajes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+
+        .card h2 {
+            background-color: white;
+            color: #333;
+            padding: 10px;
+            font-size: 1.5rem;
+        }
+
+        .card img {
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .card p {
+            margin: 5px 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Media Queries para mejorar la adaptabilidad */
+        @media (max-width: 768px) {
+            .container {
+            grid-template-columns: repeat(auto-fit, minmax(2f, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <H1>Lista de Personajes</H1>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>Personaje 1</h2>
+            <img src="https://cartelurbano.com/sites/default/files/cuadradaotalora.jpg" alt="Personaje 1">
+            <p>Estado: Vivo</p>
+            <p>Especie: Humano</p>
+        </div>
+
+        <div class="card">
+            <h2>Personaje 2</h2>
+            <img src="https://cartelurbano.com/sites/default/files/cuadradaotalora.jpg" alt="Personaje 2">
+            <p>Estado: Muerto</p>
+            <p>Especie: Alien</p>
+        </div>
+
+        <div class="card">
+            <h2>Personaje 3</h2>
+            <img src="https://cartelurbano.com/sites/default/files/cuadradaotalora.jpg" alt="Personaje 3">
+            <p>Estado: Desconocido</p>
+            <p>Especie: Robot</p>
+        </div>
+
+        <div class="card">
+            <h2>Personaje 4</h2>
+            <img src="https://cartelurbano.com/sites/default/files/cuadradaotalora.jpg" alt="Personaje 4">
+            <p>Estado: Vivo</p>
+            <p>Especie: Humano</p>
+        </div>
+
+        <div class="card">
+            <h2>Personaje 5</h2>
+            <img src="https://cartelurbano.com/sites/default/files/cuadradaotalora.jpg" alt="Personaje 5">
+            <p>Estado: Vivo</p>
+            <p>Especie: Alien</p>
+        </div>
+
+        <div class="card">
+            <h2>Personaje 6</h2>
+            <img src="https://cartelurbano.com/sites/default/files/cuadradaotalora.jpg" alt="Personaje 6">
+            <p>Estado: Desconocido</p>
+            <p>Especie: Mutante</p>
+        </div>
+
+        <div class="card">
+            <h2>Personaje 7</h2>
+            <img src="https://cartelurbano.com/sites/default/files/cuadradaotalora.jpg" alt="Personaje 7">
+            <p>Estado: Desconocido</p>
+            <p>Especie: Mutante</p>
+        </div>
+
+        <div class="card">
+            <h2>Personaje 8</h2>
+            <img src="https://cartelurbano.com/sites/default/files/cuadradaotalora.jpg" alt="Personaje 8">
+            <p>Estado: Desconocido</p>
+            <p>Especie: Mutante</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
