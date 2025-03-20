@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    height: 100vh;
+    gap: 10px;
+    padding: 10px;
+}
+.darkMode{
+    background-color: black;
+    color: white;
+}
+.Header {
+    grid-column: 1 / -1;
+    background: #3498db;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.Header-title {
+    font-size: 24px;
+}
+.Header-btn {
+    background: white;
+    border: none;
+    padding: 10px;
+    cursor:pointer;
+}
+
+.Main {
+    grid-column: 2 / 3;
+    background: #ecf0f1;
+    padding: 20px;
+}
+
+.Sidebar{
+    grid-column: 1/2;
+    background: #2ecc71;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.Footer {
+    grid-column: 1 / -1;
+    background: #e74c3c;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.hero {
+    text-align: center;
+}
+.hero img {
+    filter: drop-shadow(5px 5px 10px gray);
+    max-width: 100%;
+}
+.Container {
+    text-align: center;
+}
+.Container div {
+    display: inline-block;
+    padding: 15px;
+    background: #f39c12;
+    cursor: pointer;
+    transition: transform 1s, background 1s;
+}
+.Container div:hover {
+    transform: rotate(10deg) scale(1.2);
+    background: #d35400;
+}
+.isActivated {
+    background: #8e44ad !important;
+    color: white;
+    transform: scale(1.1);
+}
