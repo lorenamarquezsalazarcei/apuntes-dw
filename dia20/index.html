@@ -11,6 +11,11 @@
    <link rel="stylesheet" href="CSS/controllers.css">
    <link rel="stylesheet" href="CSS/layout.css">
    <link rel="stylesheet" href="CSS/rrss.css">
+
+   <!-- Fuentes de Google -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap" rel="stylesheet">
 </head>
 
 <body class="u-bgPrimary">
@@ -21,7 +26,6 @@
 
     <main class="Main u-bgSecondary">
         <div class="Icons">
-
             <div class="IconBox u-bgPrimary IconBox--fb">
                 <a class="IconBox-link" href="">
                     <div class="IconBox-layers">
@@ -119,7 +123,7 @@
 
     </main>
 
-    <div class="Controllers">
+    <div id="btnDireccion"class="Controllers">
         <button id="btnDireccion" class="Btn">
             Columna
         </button>
@@ -136,7 +140,13 @@
 
     <script>
         const btnDarkLight = document.querySelector("#btnDarkLight");
+        const btnDireccion = document.querySelector("#btnDireccion");
+        const iconsContainer = document.querySelector(".Icons");
+
         console.log("Boton darkLight es:", btnDarkLight);
+
+        console.log("Botón Dirección es:", btnDireccion);
+
         btnDarkLight.addEventListener("click", () => {
             document.body.classList.toggle("u-Dark");
             if (document.body.classList.contains("u-Dark")) {
@@ -145,6 +155,16 @@
                 btnDarkLight.querySelector("span").innerText = "dark_mode";
             }
         });
+
+        btnDireccion.addEventListener("click", ()=>{
+            iconsContainer.classList.toggle("u-flexCol");
+            if(iconsContainer.classList.contains("u-flexCol")){
+                btnDireccion.querySelector("button").innerText="Fila";
+            } else{
+                btnDireccion.querySelector("button").innerText="Columna";
+            }
+        })
+
     </script>
 </body>
 
