@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click me!</button>
+
+    <div id="content">
+        .....
+    </div>
+
+
+    <script>
+        const boton =document.querySelector("#btn");
+        const container = document.querySelector("#content");
+
+        let numero =0;
+        boton.addEventListener ("click",contar);
+        function contar(){
+            numero=numero+1;
+            container.textContent=numero;
+        }
+
+        function saludar(){
+            container.textContent="Soy el texto nuevo agregado"
+        }
+    </script>
+</body>
+</html>

@@ -32,3 +32,32 @@ if (edad>=18){
 }
 
 ```
+
+
+# Bucles
+
+## Ver números pares del 1 al 10
+
+```js
+for (leti=1; i<=11 ; i++){
+    console.log("Numero:", i);
+}
+
+//Ejemplo de uso de While
+// Bucle usando Mientras (While) en vez de for
+let i=0;
+while (i<10){
+    //inicio del bucle
+    console.log(i);
+    //fin del bucle
+    i++;
+}
+//Bucle Do - While, pero se ejecuta al menos una vez.
+do{
+    console.log(i);
+    i++;
+
+} while (1<10);
+
+
+```
