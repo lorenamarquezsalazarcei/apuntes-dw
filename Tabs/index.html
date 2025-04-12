@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .contenedor {
+            width: 90%;
+            max-width: 120em;
+            padding: 1em;
+            box-shadow: 8px 8px 20px #ccc, -8px -8px 20px #fff;
+            border-radius: 0.6em;
+        }
+
+        .contenedor .ul {
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .contenedor .li {
+            width: 100%;
+
+            padding: 1em;
+            margin: 0 1em 0 0;
+            box-shadow: 8px 8px 20px #ccc, -8px -8px 20px #fff;
+            border-radius: 0.6em;
+            text-align: center;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease;
+
+        }
+        .li.activo {
+            box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra dentro del contenedor */
+        }
+
+        .contenedor .subcontenedor {
+            min-height: 10vh;
+            position: relative;
+
+        }
+
+        .contenedor .bloque {
+            padding: 1em;
+            margin: 1em;
+            display: none;
+            top: 1em;
+    
+        }
+
+        .contenedor .bloque.activo {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <ul class="ul">
+            <li class="li">Opcion 0</li>
+            <li class="li">Opcion 1</li>
+            <li class="li">Opcion 2</li>
+        </ul>
+        <div class="subcontenedor">
+            <div class="bloque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, culpa?</div>
+            <div class="bloque">The readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many websites still in their infancy</div>
+            <div class="bloque">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</div>
+        </div>
+    </div>
+
+    <script>
+        const li = document.querySelectorAll('.li');
+        const bloque = document.querySelectorAll('.bloque');
+
+        li.forEach((cadaLi, i) => {
+            li[i].addEventListener('click', () => {
+              
+                li.forEach((cadaLi, i) => {
+                    li[i].classList.remove('activo')
+                    bloque[i].classList.remove('activo')
+                })
+
+                li [i].classList.add('activo')
+                    bloque[i].classList.add('activo')
+            })
+        });
+    </script>
+</body>
+
+</html>

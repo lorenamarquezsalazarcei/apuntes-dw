@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.acordeon {
+    width: 20%;
+    padding: 2em;
+    box-shadow: 8px 8px 20px #ccc, -8px -8px 20px #fff;
+    border-radius: 1em;
+}
+
+.acordeon .bloque {
+    margin: 0 0 1em;
+    padding: 1em;
+    box-shadow: 8px 8px 20px #ccc, -8px -8px 20px #fff;
+    border-radius: 1em;
+}
+
+.acordeon .h2 {
+    margin: 0 0 1em;
+    padding: 1em;
+    box-shadow: 8px 8px 20px #ccc, -8px -8px 20px #fff;
+    border-radius: 1em;
+}
+
+.acordeon .contenido {
+    padding: 0em;
+    height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.acordeon .bloque.activo .contenido {
+    height: 4em;
+}
