@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palabras Estéticas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin-top: 7em;
+            margin-left: 3em;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
+            background-blend-mode: multiply;
+            transition: background-image 0.3s ease-in-out;
+
+        }
+
+        .linea {
+            display: flex;
+            gap: 20px;
+            padding: 10px 0;
+        }
+
+        .item {
+            display: flex;
+            align-items: baseline;
+            gap: 1em;
+            transition: opacity 0.3s ease-in-out;
+
+        }
+
+        .item:hover {
+            opacity: 1;
+        }
+
+        h1 {
+            font-size: 80px;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 0;
+            font-size: 14px;
+            color: rgb(226, 226, 226);
+            font-family: 'Times New Roman';
+            font-style: italic;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="linea linea1">
+        <div class="item zpump" data-bg="./assets/reebok.jpeg">
+            <h1>ZPump Urban Fit</h1>
+            <p>Reebok</p>
+        </div>
+        <div class="item coach" data-bg="./assets/fontvella.jpeg">
+            <h1>Coach 2o</h1>
+            <p>Font Vella</p>
+        </div>
+    </div>
+
+    <div class="linea linea2">
+        <div class="item rcar" data-bg="./assets/rcar.jpg">
+            <h1>Rcar</h1>
+            <p>Revista Car</p>
+        </div>
+        <div class="item emotional" data-bg="./assets/seidor.jpg">
+            <h1>Emotional Pulse</h1>
+            <p>Seidor</p>
+        </div>
+    </div>
+
+    <div class="linea linea3">
+        <div class="item alhambra" data-bg="./assets/alhambra.jpg">
+            <h1>Alhambra</h1>
+            <p>Cervezas Alhambra</p>
+        </div>
+        <div class="item actimel" data-bg="./assets/actimel.jpg">
+            <h1>Actimel</h1>
+            <p>Danone</p>
+        </div>
+        <div class="item ffuuss" data-bg="./assets/ffuuss.jpg">
+            <h1>ffuuss</h1>
+            <p>OTS Group</p>
+        </div>
+    </div>
+
+    <div class="linea linea4">
+        <div class="item delicious" data-bg="./assets/dia.jpeg">
+            <h1>Delicious</h1>
+            <p>Día</p>
+        </div>
+        <div class="item roca" data-bg="./assets/roca.jpg">
+            <h1>Roca</h1>
+            <p>Sanitarios</p>
+        </div>
+        <div class="item deepstate" data-bg="./assets/fox.jpg">
+            <h1>Deep State</h1>
+            <p>Fox</p>
+        </div>
+    </div>
+
+    <script>
+        const items = document.querySelectorAll('.item');
+
+        items.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const bg = item.getAttribute('data-bg');
+                document.body.style.backgroundImage = `url(${bg})`;
+
+                // Reduce opacidad de otros
+                items.forEach(i => {
+                    if (i !== item) {
+                        i.style.opacity = '0.3';
+                    }
+                });
+            });
+
+            item.addEventListener('mouseleave', () => {
+                document.body.style.backgroundImage = 'none';
+
+                // Restaurar opacidad
+                items.forEach(i => {
+                    i.style.opacity = '1';
+                });
+            });
+        });
+    </script>
+</body>
