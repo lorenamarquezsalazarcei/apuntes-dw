@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'The Season';
+    src: url('./fonts/the-seasons.ttf') format('truetype');
+}
+
+body {
+    background-color: #E4E2DD;
+    color: #504C44;
+    font-family: 'The Season', sans-serif;
+}
+
+.cabecera {
+    background-color: #504C44;
+    color: #E4E2DD;
+    width: 100%;
+    padding: 10px 0;
+    font-family: 'The Season', sans-serif;
+
+}
+
+.nav-container {
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    margin-left: -40px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list a {
+    color: #E4E2DD;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #ffffff;
+}
+
+/* Carrusel */
+
+.carrusel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrusel-container {
+    position: relative;
+    width: 100vw;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carrusel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrusel-track img {
+    width: 100vw;
+    flex-shrink: 0;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Flecha derecha */
+.flecha-derecha {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: #E4E2DD;
+    color: rgba(80, 76, 68, 0.8);
+    ;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 30%;
+    opacity: 70%;
+    border: none;
+
+}
+
+/* Sobre mi */
+
+.sobre-mi {
+    background-color: #E4E2DD;
+    color: #504C44;
+    padding: 60px 20px;
+}
+
+.sobre-mi-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.sobre-mi h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-family: 'The Season', sans-serif;
+}
+
+.sobre-mi p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.foto img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-left: 50px;
+}
+/* Boton CV */
+.boton-cv {
+    display: inline-block;
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+    padding: 12px 24px;
+    border: 1px solid #504C44;
+    color: #504C44;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'The Season', sans-serif;
+
+}
+
+.boton-cv:hover {
+    background-color: #6a665d;
+    color: #E4E2DD;
+}
+
+@media (max-width: 768px) {
+    .sobre-mi-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .foto img {
+        margin: 0 auto;
+    }
+}
+
+/* MIS PROYECTOS */
+
+.proyectos {
+    background-color: #E4E2DD;
+    color: #504C44;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .proyectos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'The Season', sans-serif;
+  }
+  
+  .proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .proyecto {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .proyecto:hover {
+    transform: translateY(-5px);
+  }
+  
+  .proyecto iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 12px;
+  }
+  
+  .proyecto h3 {
+    font-size: 1.3rem;
+    margin: 15px 0 10px;
+  }
+  
+  .proyecto p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
