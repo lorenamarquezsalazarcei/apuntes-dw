@@ -564,7 +564,6 @@ body {
 
 .contacto-section {
     background-color: #E4E2DD; /* fondo beige */
-    padding: 60px 20px;
     display: flex;
     flex-direction: column; /* ← Aquí está la clave */
     align-items: center;     /* centra en columna */
@@ -629,3 +628,41 @@ body {
 .contacto-form button:hover {
   background-color: #e2dfd5;
 }
+/* FOOTER */
+.footer {
+  background-color: #504C44;
+  color: #E4E2DD;
+  text-align: center;
+  padding: 30px 20px;
+  font-family: 'The Season', sans-serif;
+  font-size: 1rem;
+  margin-top: 50px;
+}
+
+.footer a {
+  color: #E4E2DD;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+
+.redes-sociales {
+  margin-top: 20px;
+}
+
+.redes-sociales a {
+  color: #E4E2DD;
+  margin: 0 15px;
+  font-size: 2rem; /* Tamaño grande para los iconos */
+  transition: color 0.3s ease;
+}
+
+.redes-sociales a:hover {
+  color: #ffffff;
+}
+
